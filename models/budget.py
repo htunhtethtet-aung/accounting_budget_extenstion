@@ -107,6 +107,8 @@ class Budget(models.Model):
 
     account_type = fields.Selection(
         string="Type", related="account_id.account_type")
+    x_studio_type = fields.Selection(
+        string="Type", related="account_id.account_type")
     group_id = fields.Many2one('budgetextension.grouping', string="Grouping",
                                store=True)
 
