@@ -448,7 +448,7 @@ class Budget(models.Model):
 
     def _get_suggested_dates(self):
         temp_date = self.search([('account_id', '=', self.account_id.id)],
-                                limit=1, order='end_date desc').end_date
+                                limit=1, order='end_date DESC').end_date
         if temp_date:
             latest_date = datetime.strptime(str(temp_date),
                                             DEFAULT_SERVER_DATE_FORMAT)
